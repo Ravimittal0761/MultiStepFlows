@@ -33,10 +33,10 @@ useEffect(() => {
           <Text style={styles.headerText}>Summary</Text>
         </View>
 
-        {/* Card */}
+       
         <View style={styles.card}>
           
-          {/* Row 1: Age + Goal */}
+          
           <View style={styles.rowBetween}>
             <View style={styles.halfBox}>
               <Text style={styles.label}>Age</Text>
@@ -49,10 +49,9 @@ useEffect(() => {
             </View>
           </View>
 
-          {/* Divider */}
+    
           <View style={styles.divider} />
 
-          {/* Row 2: Preferences */}
           <View style={styles.fullRow}>
             <Text style={styles.label}>Preferences</Text>
             <Text style={styles.value}>
@@ -64,7 +63,7 @@ useEffect(() => {
 
           <View style={styles.divider} />
 
-          {/* Row 3: Extra */}
+         
           <View style={styles.fullRow}>
             <Text style={styles.label}>Extra</Text>
             <Text style={styles.value}>{formData.extra || "-"}</Text>
@@ -72,7 +71,7 @@ useEffect(() => {
 
         </View>
 
-        {/* Button */}
+       
         <TouchableOpacity
           style={styles.button}
           onPress={() => router.push("/(screens)/Step1")}
