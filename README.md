@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+# MultiStepFlows App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple and clean multi-step form app built using React Native (Expo).  
+This app saves user progress and restores it when the app is reopened.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Multi-step form (Step1 → Step2 → Step3 → Summary)
+- Conditional step (Extra step for Fitness users)
+- Auto-save using AsyncStorage
+- Resume from last step after app reopen
+- Clean and minimal UI
+- Expo Router navigation
 
-   ```bash
-   npm install
-   ```
+## Flow of the App
 
-2. Start the app
+1.  **Step 1 (Age Input)**
 
-   ```bash
-   npx expo start
-   ```
+- User enters age
+- Data gets saved
 
-In the output, you'll find options to open the app in a
+2. **Step 2 (Select Goal)**
+   - User selects:
+     - Fitness → goes to Extra Step
+     - Study → skips Extra Step
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+3. **Extra Step (Only for Fitness)**
+   - User enters workout preference
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. **Step 3 (Preferences)**
+   - User selects multiple preferences
 
-## Get a fresh project
+5. **Summary Screen**
+   - Displays all entered data
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## Data Handling
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Data is stored using **AsyncStorage**
+- Current step is also saved
+- On app restart:
+  - User lands on the same step (resume feature)
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Tech Stack
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- React Native (Expo)
+- TypeScript
+- Expo Router
+- AsyncStorage
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Run the Project
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**bash**
+npm install
+npx expo start
